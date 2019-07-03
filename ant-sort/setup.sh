@@ -19,7 +19,10 @@ unzip /setup/ants.zip
 unzip /setup/cosine.zip
 
 # Unpack the data
-cd /root && unzip /setup/data.zip
+cd /root
+unzip /setup/data.zip
+unzip /setup/scripts.zip
+cp /setup/README.md .
 
 # Generate fake data and normalize real data
 cd /root/data && /root/data/generate.sh
@@ -34,6 +37,10 @@ chmod 755 /root/build.sh
 # Generate the run script
 echo "/root/src/ants/bin/accl \"\${@}\"" >> /root/run.sh
 chmod 755 /root/run.sh
+
+# Generate the visualize script
+echo "python3.6 scripts/pos2svg.py \"\${@}\"" >> /root/visualize.sh
+chmod 755 /root/visualize.sh
 
 # Build the code
 cd /root && /root/build.sh
