@@ -5,9 +5,12 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install nodejs and npm for the demo CLI
 RUN apt-get update
-RUN apt-get install curl python-software-properties
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-RUN apt-get install nodejs
+RUN apt-get install -y curl python-software-properties
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
+
+# Install rsync for the 'demo sync' command
+RUN apt-get install -y rsync
 
 # Create the standard directories
 RUN mkdir -p /setup

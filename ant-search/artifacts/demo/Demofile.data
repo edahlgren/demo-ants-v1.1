@@ -8,13 +8,14 @@ demo = 'dm/ant-colony-search'
 
 [data]
 description = "National traveling salesman problem datasets, featuring countries from around the world"
+source = "University of Waterloo"
+url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
       
   [data.extra]
-  cities = "number of cities"  
-  optimal_tour = "optimal tour length"
+  cities = "cities"  
+  optimal_tour = "optimal tour"
     
   [data.preconfigured.djibouti]
-  description = "Djibouti, Africa"
   dir = "/root/data/djibouti"
   files = [
     "dj38.tsp",
@@ -24,14 +25,11 @@ description = "National traveling salesman problem datasets, featuring countries
     "A graph representing all 38 cities in the country of Djibouti, in TSPLIB format",
     "A geographic map of an optimal round-trip tour through the cities of Djibouti",
   ]
-  source = "University of Waterloo"
-  url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
   extra = ["cities", "optimal_tour"]
   cities = 38
   optimal_tour = 6656
   
-  [data.qatar]
-  name = "Qatar, Middle East"
+  [data.preconfigured.qatar]
   dir = "/root/data/qatar"
   files = [
     "qa194.tsp",
@@ -41,14 +39,11 @@ description = "National traveling salesman problem datasets, featuring countries
     "A graph representing all 194 cities in the country of Qatar, in TSPLIB format",
     "A geographic map of an optimal round-trip tour through the cities of Qatar",
   ]
-  source = "University of Waterloo"
-  url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
   extra = ["cities", "optimal_tour"]
   cities = 194
   optimal_tour = 9352
 
-  [data.luxembourg]
-  name = "Luxembourg, Europe"
+  [data.preconfigured.luxembourg]
   dir = "/home/data/luxembourg"
   files = [
     "lu980.tsp",
@@ -58,8 +53,6 @@ description = "National traveling salesman problem datasets, featuring countries
     "A graph representing all 980 cities in the country of Luxembourg, in TSPLIB format",
     "A geographic map of an optimal round-trip tour through the cities of Luxembourg",
   ]
-  source = "University of Waterloo"
-  url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
   extra = ["cities", "optimal_tour"]
   cities = 980
   optimal_tour = 11340

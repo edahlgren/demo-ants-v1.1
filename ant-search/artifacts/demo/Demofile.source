@@ -7,23 +7,22 @@ demo = 'dm/ant-colony-search'
 ########################################################
 
 [source]
-name = "ACOTSP"
-dir = ['/root/src']
+description = "Implements six ant colony optimization algorithms that solve traveling salesman problems"
 
-  [source.note.parse]
-  file = '/root/src/parse.c'
+  [source.preconfigured.acotsp]
+  authors = []
+  version = "1.03"
+  license = 'GPLv2'
+  dir = ['/root/src/acotsp']
+
+  [source.preconfigured.acotsp.notable_files.parse]
+  file = 'parse.c'
   description = "Parses commandline parameters"
 
-  [source.note.init]
-  file = '/root/src/InOut.c'
+  [source.preconfigured.acotsp.notable_files.init]
+  file = 'InOut.c'
   description = "Initializes the ant colony"
 
-  [source.note.algorithm]
-  file = '/root/src/acotsp.c'
-  description = "Implements ant searching to solve TSP"
-
-description = "Implements six ant colony optimization algorithms that solve traveling salesman problems"
-authors = []
-version = "1.03"
-license = '/root/src/gpl.txt'
-entrypoints = ['/home/src/acotsp.c']
+  [source.preconfigured.acotsp.notable_files.algorithm]
+  file = 'acotsp.c'
+  description = "(entrypoint) Implements ant searching to solve TSP"

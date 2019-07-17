@@ -7,16 +7,31 @@ demo = 'dm/ant-colony-search'
 ########################################################
 
 [run]
-default = "easy"
+default = "djibouti"
 
-  [run.preconfigured.easy]
+  [run.preconfigured.djibouti]
+  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/djibouti.sh'
-  description = "(easy) Djibouti - 38 cities"
+  output_files = [
+    'best.dj38',
+    'cmp.dj38',
+    'stat.dj38',
+  ]
 
-  [run.preconfigured.medium]
+  [run.preconfigured.qatar]
+  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/qatar.sh'
-  description = "(medium) Qatar - 194 cities"
+  output_files = [
+    'best.qa194',
+    'cmp.qa194',
+    'stat.qa194',
+  ]
 
-  [run.preconfigured.difficult]
+  [run.preconfigured.luxembourg]
+  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/luxembourg.sh'
-  description = "(difficult) Luxembourg - 980 cities"
+  output_files = [
+    'best.lu980',
+    'cmp.lu980',
+    'stat.lu980',
+  ]
