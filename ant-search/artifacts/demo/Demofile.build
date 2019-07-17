@@ -7,19 +7,17 @@ demo = 'dm/ant-colony-search'
 ########################################################
 
 [build]
-default = "noconfig"
+default = "default"
+clean = '/demo/build/clean.sh'
 
-  [build.preconfigured.noconfig]
-  exec = '/demo/build/default.sh'
-  description = "Make with gcc"
+  [build.preconfigured.default]
+  script = '/demo/build/default.sh'
+  description = "make with gcc"
 
   [build.preconfigured.optimized]
-  exec = '/demo/build/optimized.sh'
-  description = "Make with gcc -O3"
+  script = '/demo/build/optimized.sh'
+  description = "make with gcc -O3"
 
   [build.preconfigured.debug]
-  exec = '/demo/build/debug.sh'
-  description = "Make with gcc -g"
-
-dir = '/root/src'
-config_files = ['/root/src/Makefile']
+  script = '/demo/build/debug.sh'
+  description = "make with gcc -g"

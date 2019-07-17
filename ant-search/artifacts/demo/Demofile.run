@@ -10,7 +10,6 @@ demo = 'dm/ant-colony-search'
 default = "djibouti"
 
   [run.preconfigured.djibouti]
-  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/djibouti.sh'
   output_files = [
     'best.dj38',
@@ -19,7 +18,6 @@ default = "djibouti"
   ]
 
   [run.preconfigured.qatar]
-  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/qatar.sh'
   output_files = [
     'best.qa194',
@@ -28,7 +26,6 @@ default = "djibouti"
   ]
 
   [run.preconfigured.luxembourg]
-  only_log = '^best so far|^ Best Solution'
   script = '/demo/run/luxembourg.sh'
   output_files = [
     'best.lu980',
