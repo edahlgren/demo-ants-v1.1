@@ -7,13 +7,13 @@ demo = 'dm/ant-colony-search'
 ########################################################
 
 [source]
-description = "Implements six ant colony optimization algorithms that solve traveling salesman problems"
 
   [source.preconfigured.acotsp]
   authors = []
   version = "1.03"
   license = 'GPLv2'
   dir = ['/root/src/acotsp']
+  description = "Implements six ant colony optimization algorithms that solve traveling salesman problems"
 
   [source.preconfigured.acotsp.notable_files.parse]
   file = 'parse.c'

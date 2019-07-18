@@ -7,15 +7,17 @@ demo = 'dm/ant-colony-search'
 ########################################################
 
 [data]
-description = "National traveling salesman problem datasets, featuring countries from around the world"
-source = "University of Waterloo"
-url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
+
+  [data.preconfigured.national_tsp]
+  description = "National traveling salesman problem datasets, featuring countries from around the world"
+  source = "University of Waterloo"
+  url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
       
-  [data.extra]
+  [data.preconfigured.national_tsp.extra]
   cities = "cities"  
   optimal_tour = "optimal tour"
     
-  [data.preconfigured.djibouti]
+  [data.preconfigured.national_tsp.djibouti]
   dir = "/root/data/djibouti"
   files = [
     "dj38.tsp",
@@ -29,7 +31,7 @@ url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
   cities = 38
   optimal_tour = 6656
   
-  [data.preconfigured.qatar]
+  [data.preconfigured.national_tsp.qatar]
   dir = "/root/data/qatar"
   files = [
     "qa194.tsp",
@@ -43,7 +45,7 @@ url = "http://www.math.uwaterloo.ca/tsp/world/countries.html"
   cities = 194
   optimal_tour = 9352
 
-  [data.preconfigured.luxembourg]
+  [data.preconfigured.national_tsp.luxembourg]
   dir = "/home/data/luxembourg"
   files = [
     "lu980.tsp",

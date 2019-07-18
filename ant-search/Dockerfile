@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
+USER root
 
 # Install nodejs and npm for the demo CLI
 RUN apt-get update
@@ -18,26 +19,32 @@ RUN mkdir -p /setup
 # Copy in and unpack the Demofiles
 COPY artifacts/demo.tgz /setup/demo.tgz
 RUN tar -zxvf /setup/demo.tgz -C /
+RUN chown -R root:root /demo
 
 # Copy in and unpack the build scripts
 COPY artifacts/build.tgz /setup/build.tgz
-RUN tar -zxvf /setup/build.tgz -C /demo && chmod 755 /demo/build/*.sh
+RUN tar -zxvf /setup/build.tgz -C /demo
+RUN chown -R root:root /demo/build && chmod 755 /demo/build/*.sh
 
 # Copy in and unpack the run scripts
 COPY artifacts/run.tgz /setup/run.tgz
-RUN tar -zxvf /setup/run.tgz -C /demo && chmod 755 /demo/run/*.sh
+RUN tar -zxvf /setup/run.tgz -C /demo
+RUN chown -R root:root /demo/run && chmod 755 /demo/run/*.sh
 
 # Copy in and unpack the test data
 COPY artifacts/data.tgz /setup/data.tgz
 RUN tar -zxvf /setup/data.tgz -C /root
+RUN chown -R root:root /root/data
 
 # Copy in and unpack the source
 COPY artifacts/src.tgz /setup/src.tgz
 RUN tar -zxvf /setup/src.tgz -C /root
+RUN chown -R root:root /root/src
 
 # Copy in the unpack the papers
 COPY artifacts/papers.tgz /setup/papers.tgz
 RUN tar -zxvf /setup/papers.tgz -C /root
+RUN chown -R root:root /root/papers
 
 # Run the setup script
 COPY setup.sh /setup/setup.sh
