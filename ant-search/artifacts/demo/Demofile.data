@@ -17,7 +17,7 @@ demo = 'dm/ant-colony-search'
   cities = "cities"  
   optimal_tour = "optimal tour"
     
-  [data.preconfigured.national_tsp.djibouti]
+  [data.preconfigured.national_tsp.set.djibouti]
   dir = "/root/data/djibouti"
   files = [
     "dj38.tsp",
@@ -31,7 +31,7 @@ demo = 'dm/ant-colony-search'
   cities = 38
   optimal_tour = 6656
   
-  [data.preconfigured.national_tsp.qatar]
+  [data.preconfigured.national_tsp.set.qatar]
   dir = "/root/data/qatar"
   files = [
     "qa194.tsp",
@@ -45,7 +45,7 @@ demo = 'dm/ant-colony-search'
   cities = 194
   optimal_tour = 9352
 
-  [data.preconfigured.national_tsp.luxembourg]
+  [data.preconfigured.national_tsp.set.luxembourg]
   dir = "/home/data/luxembourg"
   files = [
     "lu980.tsp",

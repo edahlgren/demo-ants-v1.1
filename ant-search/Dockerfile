@@ -4,6 +4,9 @@ ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
 USER root
 
+# Create the setup directory
+RUN mkdir -p /setup
+
 # Install nodejs and npm for the demo CLI
 RUN apt-get update
 RUN apt-get install -y curl python-software-properties
@@ -13,8 +16,9 @@ RUN apt-get install -y nodejs
 # Install rsync for the 'demo sync' command
 RUN apt-get install -y rsync
 
-# Create the standard directories
-RUN mkdir -p /setup
+# Install the demo CLI
+COPY demo-mag-cli-1.0.0.tgz /setup/demo-mag-cli-1.0.0.tgz
+RUN npm install -g /setup/demo-mag-cli-1.0.0.tgz
 
 # Copy in and unpack the Demofiles
 COPY artifacts/demo.tgz /setup/demo.tgz
